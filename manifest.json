@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "Fake news Detector",
+  "description": "Fake news detector ramjane",
+  "version": "1.0.0",
+  "icons": { "128": "ramm.png" },
+  "browser_action": {
+    "default_icon": "small_ram.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab" ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://unpkg.com/axios/dist/axios.min.js; object-src 'self'"
+}
