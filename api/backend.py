@@ -39,12 +39,12 @@ def rand(str):
 
 @app.route('/')
 def home():
-    return render_template('result.html') ;
-  #<string:msg>
+    return "api" ;
+
 @app.route('/predict/<string:msg>', methods=['GET'])
 def predict(msg : str):#
     message = msg;  #fetch news article to message.
-    pred = rand(message)      #predict garera denaxa.
+    pred = fake_news_det(message)      #predict garera denaxa.
     print(pred)  #pred = fake or real. 
     verified_sites = verification(message)
     result = {
@@ -53,7 +53,7 @@ def predict(msg : str):#
         "verified_sites": verified_sites
     }
     return  {"result":result};
-#
+
 if __name__ == '__main__':
     app.run(debug=True)
 

@@ -1,6 +1,11 @@
+let main2 = document.getElementById("main2");
+let result = document.getElementById('result');
+let fake_case = document.getElementById('fake_case');
+main2.style.display = 'none';
 document.addEventListener("DOMContentLoaded", () => {
   let wrapper = document.getElementById("wrapper");
   let main = document.getElementById("main");
+
 document.getElementById("sucess").addEventListener("click", async()=> {
   
     let toCheckArticle = document.getElementById("article").value;
@@ -15,14 +20,19 @@ document.getElementById("sucess").addEventListener("click", async()=> {
     .then(json => {
       data = json.result;
       console.log(data.predict)
-      if(data.predict === "true" ){
-        wrapper.style.display = 'none';
-
+      
+        main.style.display = 'none';
+        main2.style.display = 'block';
+       
+      result.innerHTML =  `This article is ${data.predict}`;
+      if(data.predict === 'false') {
+        fake_case.style.display = 'none';
       }
     })    //print data to console
     .catch(err => console.log('Request Failed', err)); // Catch errors
 
     }
+    
    
    console.log(data);
    
