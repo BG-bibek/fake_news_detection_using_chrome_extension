@@ -77,3 +77,27 @@
             width: 80px;
            margin-left: 145px;
       }
+
+      h4, h3 {
+        font-family: "Menlo", monospace;
+        color: #5f28a6;
+        text-align: center;
+        font-weight: 800;
+    }
+    
+    .btn {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #eee;
+      font-size: 12px;
+      box-shadow: 1px 1px 5px #ccc;
+      transition: 100ms;
+  }
+  
+  .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 2px 2px 5px #ccc;
+  }
+  
